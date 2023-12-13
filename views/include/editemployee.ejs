@@ -1,0 +1,201 @@
+<form id="editEmployeeForm">
+    <div class="editEmployeePopup">
+        <div class="modal" id="editPopup">
+            <div class="cardbg">
+                <div class="row cardbgHeader">
+                    <div class="col-11">
+                        <h4 class="headerform fw-bold">Edit Employee</h4>
+                    </div>
+                    <div class="col-1">
+                        <button type="button" id="editCloseBtn" class="close">
+                            <span class="material-symbols-outlined"> close </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row mt-3 img_update">
+                    <div class="col-2 employeeProfilePic bg-light">
+                        <!-- <div class="uploadedimg" id="editImgPreview"></div> -->
+                        <img class="uploadedimg" id="editImgPreview" src="" alt="user profile img" />
+                    </div>
+
+                    <div class="col imgeditbtn">
+                        <div class="imgchangebtn" id="imgChange" onclick="updateImage()">
+                            Change
+                            <input type="file" id="editImgUpload" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-4">
+                        <label for="editsalutation" class="form-label fw-bold">Salutation
+                            <span class="requiredstar text-danger">*</span></label>
+                        <select class="form-select" aria-label="Default select example" id="editsalutation">
+                            <option value="" selected disabled>Select</option>
+                            <option value="Mr">Mr.</option>
+                            <option value="Mrs">Mrs.</option>
+                            <option value="Miss">Miss.</option>
+                        </select>
+                        <label for="salutation" class="form-label text-danger validationText"
+                            id="editsalutationValidation">Salutation is required</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="editfirstname" class="form-label fw-bold">First name
+                            <span class="requiredstar text-danger">*</span></label>
+                        <input type="text" id="editfirstname" placeholder="first name"
+                            class="form-control capitalize" />
+                        <label for="editfirstname" class="form-label text-danger validationText"
+                            id="editfirstnameValidation">First name is required</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="editlastname" class="form-label fw-bold">Last name
+                            <span class="requiredstar text-danger">*</span></label>
+                        <input type="text" id="editlastname" placeholder="last name"
+                            class="form-control capitalize" />
+                        <label for="editfirstname" class="form-label text-danger validationText"
+                            id="editlastnameValidation">Last name is required</label>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-6">
+                        <label for="editemail" class="form-label fw-bold">Email Address
+                            <span class="requiredstar text-danger">*</span></label>
+                        <input type="text" id="editemail" placeholder="mail@simmmple.com"
+                            class="form-control" />
+                        <label for="editemail" class="form-label text-danger validationText"
+                            id="editemailValidation">Email is required</label>
+                    </div>
+                    <div class="col-sm-6 placeholdercolor">
+                        <label for="editmobile" class="form-label fw-bold">Mobile Number
+                            <span class="requiredstar text-danger">*</span></label>
+                        <input type="text" id="editmobile" placeholder="enter mobile number"
+                            class="form-control" maxlength="10" />
+                        <label for="editmobile" class="form-label text-danger validationText"
+                            id="editmobileValidation">mobile number is required</label>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-6">
+                        <label for="editdatepicker" class="form-label fw-bold">Date of Birth
+                            <span class="requiredstar text-danger">*</span></label>
+                        <input type="date" id="editdatepicker" class="form-control" />
+                        <label for="editdatepicker" class="form-label text-danger validationText"
+                            id="editdatepickerValidation">Please select Date of Birth</label>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">Gender <span
+                            class="requiredstar text-danger">*</span></label>
+                    <div class="genderradiobox p-1">
+                        <input class="form-check-input" type="radio" name="editgender"
+                            id="editflexRadioDefaultMale" value="Male" checked />
+                        <label class="form-check-label col-2" for="editflexRadioDefaultMale">
+                            Male
+                        </label>
+                        <input class="form-check-input" type="radio" name="editgender"
+                            id="editflexRadioDefaultFemale" value="Female" />
+                        <label class="form-check-label col-2" for="editflexRadioDefaultFemale">
+                            Female
+                        </label>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <label for="editaddress" class="form-label fw-bold">Address
+                            <span class="requiredstar text-danger">*</span></label>
+                        <input type="text" id="editaddress" placeholder="enter address"
+                            class="form-control capitalize" />
+                        <label for="editaddress" class="form-label text-danger validationText"
+                            id="editaddressValidation">address is required</label>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <label for="editqualification" class="form-label fw-bold">Qualification
+                            <span class="requiredstar text-danger">*</span></label>
+                        <input type="text" id="editqualification" placeholder="Qualification"
+                            class="form-control capitalize" />
+                        <label for="editqualification" class="form-label text-danger validationText"
+                            id="editqualificationValidation">qualification is required</label>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-6">
+                        <label for="editcountry" class="form-label fw-bold">Country
+                            <span class="requiredstar text-danger">*</span></label>
+                        <select class="form-select countrypicker" aria-label="Default select example"
+                            id="editcountry">
+                            <option selected value="">Select</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                        </select>
+                        <label for="editcountry" class="form-label text-danger validationText"
+                            id="editcountryValidation">country is required</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="editstate" class="form-label fw-bold">State
+                            <span class="requiredstar text-danger">*</span></label>
+                        <select class="form-select statepicker" aria-label="Default select example"
+                            id="editstate">
+                            <option selected value="">Select</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Tamilnadu">Tamilnadu</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="New South Wales">New South Wales</option>
+                            <option value="California">California</option>
+                            <option value="Wales">Wales</option>
+                            <option value="Bavaria">Bavaria</option>
+                        </select>
+                        <label for="editstate" class="form-label text-danger validationText"
+                            id="editstateValidation">state is required</label>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-6">
+                        <label for="editcity" class="form-label fw-bold">City <span
+                                class="requiredstar text-danger">*</span></label>
+                        <input type="text" id="editcity" placeholder="enter city"
+                            class="form-control capitalize" />
+                        <label for="editcity" class="form-label text-danger validationText"
+                            id="editcityValidation">city is required</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="editzip" class="form-label fw-bold">Pin/Zip<span
+                                class="requiredstar text-danger">*</span></label>
+                        <input type="text" id="editzip" placeholder="enter zip/pin" class="form-control" />
+                        <label for="editzip" class="form-label text-danger validationText"
+                            id="editzipValidation">zip is required</label>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-6">
+                        <label for="editUserName" class="form-label fw-bold">User Name
+                            <span class="requiredstar text-danger">*</span></label>
+                        <input type="text" id="editUserName" placeholder="user name" class="form-control" />
+                        <label for="editUserName" class="form-label text-danger validationText"
+                            id="editUserNameValidation">UserName is required</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="editpassword" class="form-label fw-bold">Password<span
+                                class="requiredstar text-danger">*</span></label>
+                        <input type="password" id="editpassword" placeholder="password"
+                            class="form-control" />
+                        <label for="editpassword" class="form-label text-danger validationText"
+                            id="editpasswordValidation">password is required</label>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col formButton">
+                        <button type="button" id="editCancelBtn" class="btn closebutton">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn filledButton" id="savechanges">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
